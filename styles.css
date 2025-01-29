@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: #960000;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 0 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.welcome-section {
+    background: #960000;
+}
+
+.reviews-section {
+    background: #960000;
+}
+
+.download-section {
+    background: #960000;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px; /* Отступ справа для текста */
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Картинка с закругленными углами */
+}
+
+h1, h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FF1A1A;
+    position: relative;
+    display: inline-block;
+}
+
+.blood::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px; /* Увеличиваем размер капли */
+    height: 45px; /* Увеличиваем высоту капли */
+    background: black; /* Изменяем цвет на черный */
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none; /* Remove any interaction with the pseudo-element */
+    animation: blood-drip 1s ease-out forwards;
+}
+
+@keyframes blood-drip {
+    0% {
+        bottom: -5px;
+        opacity: 1;
+        transform: translateX(-50%) scaleY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) scaleY(1);
+    }
+    100% {
+        bottom: 60px; /* Увеличиваем расстояние, на которое капля будет стекать */
+        transform: translateX(-50%) scaleY(1);
+    }
+}
+
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #FF1A1A;
+}
+
+.download-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #FF1A1A;
+    background: #960000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #960000;
+}
