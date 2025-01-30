@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fff; /* Используем белый фон для страницы */
     color: #7B001C;
     overflow-y: scroll;
     height: 100vh;
