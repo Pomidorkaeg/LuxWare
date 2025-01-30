@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Запуск анимации при загрузке страницы
+    // Запуск анимации капли крови при загрузке страницы
     const bloodSpans = document.querySelectorAll('.blood');
     bloodSpans.forEach(bloodSpan => {
         setTimeout(() => {
@@ -13,11 +13,9 @@ document.addEventListener('scroll', () => {
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
+            section.style.opacity = '1'; // Когда секция в области видимости, делаем её видимой
         } else {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(50px)';
+            section.style.opacity = '0'; // Когда секция не в области видимости, скрываем её
         }
     });
 });

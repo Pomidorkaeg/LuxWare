@@ -1,19 +1,13 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color:  #7B001C;
+    background-color: #fff; /* Используем белый фон для страницы */
+    color: #7B001C;
     overflow-y: scroll;
     height: 100vh;
-}
-
-.container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-.section {
+  }
+  
+  .section {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,6 +16,15 @@ body {
     padding: 0 20px;
     opacity: 1;
     transform: translateY(0);
+    background-color: #7B001C; /* Убедитесь, что у секции задан фоновый цвет */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Анимация для плавного появления */
+  }
+  
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .welcome-section {
