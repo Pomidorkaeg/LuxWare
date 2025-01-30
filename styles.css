@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: black;
-    color: #960000;
+    color:  #7B001C;
     overflow-y: scroll;
     height: 100vh;
 }
@@ -25,15 +25,15 @@ body {
 }
 
 .welcome-section {
-    background: #960000;
+    background:  #7B001C;
 }
 
 .reviews-section {
-    background: #960000;
+    background:  #7B001C;
 }
 
 .download-section {
-    background: #960000;
+    background:  #7B001C;
 }
 
 .content-wrapper {
@@ -77,7 +77,7 @@ h1, h2 {
     transform: translateX(-50%);
     width: 15px; /* Увеличиваем размер капли */
     height: 45px; /* Увеличиваем высоту капли */
-    background: black; /* Изменяем цвет на черный */
+    background: red; /* Изменяем цвет на черный */
     border-radius: 50%;
     opacity: 0;
     pointer-events: none; /* Remove any interaction with the pseudo-element */
