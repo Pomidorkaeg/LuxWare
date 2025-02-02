@@ -15,14 +15,29 @@
 
     <section class="section download-section">
       <h2>Скачайте лоадер<span class="blood"></span></h2>
-      <!-- Ссылка с атрибутом download для скачивания файла -->
-      <a href="C:\Users\WORKING\Desktop\luxwar\Untitlend.png" download>
-        <button class="download-button">Скачать</button>
-      </a>
+      <button class="download-button" id="downloadButton">Скачать</button>
       <div class="image-content">
         <img src="FIB.png" alt="Продукт"/>
       </div>
     </section>
+    
+    <script>
+      // Обработчик для кнопки скачивания
+      document.getElementById('downloadButton').addEventListener('click', function() {
+        // Указываем путь к файлу
+        const filePath = 'C:\Users\WORKING\Desktop\luxwar\terror.png'; 
+    
+        // Создаем ссылку для скачивания
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = 'file.zip'; // Можно указать имя файла для скачивания
+        link.click(); // Имитируем клик по ссылке для загрузки
+    
+        // Опционально: Показываем сообщение после скачивания
+        alert('Файл начинается загрузка!');
+      });
+    </script>
+    
     
   
     <script src="script.js"></script>
