@@ -14,7 +14,7 @@ document.addEventListener('selectstart', function (e) {
 });
 
 document.getElementById('downloadButton').addEventListener('click', function() {
-    const url = 'https://github.com/Pomidorkaeg/bdsabd/blob/main/LuxWar.rar'; // Прямой путь к файлу
+    const url = 'https://drive.google.com/file/d/1lvwTbq5PAQuNhzl1_B-GCHp1OdGCF433/view?usp=drive_link'; // Прямой путь к файлу
     const link = document.createElement('a'); // создаем элемент <a>
     link.href = url; // ссылка на файл
     link.download = 'LuxWar.rar'; // задаем имя файла для загрузки
