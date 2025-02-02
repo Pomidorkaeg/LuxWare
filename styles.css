@@ -70,28 +70,27 @@ body {
 .image-content {
     flex: 1;
     text-align: right;
-  }
-  
-  .image-content img {
+}
+
+.image-content img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-  }
+}
 
-  .additional-image {
+.additional-image {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
-  }
-
+}
 
 .additional-image img {
     max-width: 250px; /* Ограничение по ширине для дополнительного изображения */
     height: auto;
     border-radius: 10px;
-  }
+}
 
 h1, h2 {
     font-size: 2rem;
@@ -106,8 +105,7 @@ h1, h2 {
     padding: 0 20px;
 }
 
-
-
+/* Анимации */
 @keyframes wave {
     0% {
         transform: translateY(0);
@@ -156,21 +154,71 @@ p {
 .download-button {
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: red;
-    background: none;
+    color: #fff; /* Белый цвет текста */
+    background: #FF1A1A; /* Ярко-красный фон */
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     text-transform: uppercase;
-    animation: button-wave 1.2s ease-in-out infinite; /* Добавляем анимацию */
+    animation: button-wave 1.2s ease-in-out infinite;
 }
 
 .download-button:hover {
-    background: #960000;
+    background: #D10000; /* Тёмно-красный фон при наведении */
     transform: scale(1.1);
 }
 
+/* Стили для секции с кнопкой и изображением */
 .download-section {
     background: linear-gradient(45deg, #7B001C, #FF1A1A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.download-section .text-content {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.download-section .image-content {
+    display: block;
+}
+
+.download-section .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Медиазапросы для респонсивности */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+
+    .text-content, .image-content {
+        flex: 1 1 100%; /* Строки с текстом и изображением занимают 100% ширины */
+    }
+
+    .download-button {
+        width: 100%; /* Кнопка будет занимать всю ширину на мобильных устройствах */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Уменьшаем шрифт заголовков */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Еще меньше шрифт для мобильных */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Уменьшаем шрифт заголовков на очень маленьких экранах */
+    }
 }
