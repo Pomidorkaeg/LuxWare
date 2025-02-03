@@ -14,7 +14,7 @@ document.addEventListener('selectstart', function (e) {
 });
 
 document.getElementById('downloadButton').addEventListener('click', function() {
-    const url = 'https://mega.nz/folder/0A4ABCCQ#GdJgtsYxE0Kpr8nIzVKgMQ'; // Прямая ссылка
+    const url = 'https://drive.google.com/uc?export=download&id=1lvwTbq5PAQuNhzl1_B-GCHp1OdGCF433'; // Прямая ссылка
     const link = document.createElement('a'); 
     link.href = url;
     link.setAttribute('download', 'LuxWar.rar');
@@ -22,4 +22,6 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     link.click();
     document.body.removeChild(link);
 });
+
+
 
