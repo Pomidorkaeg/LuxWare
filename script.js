@@ -14,9 +14,12 @@ document.addEventListener('selectstart', function (e) {
 });
 
 document.getElementById('downloadButton').addEventListener('click', function() {
-    const url = 'https://drive.google.com/file/d/1lvwTbq5PAQuNhzl1_B-GCHp1OdGCF433/view?usp=drive_link'; // Прямой путь к файлу
-    const link = document.createElement('a'); // создаем элемент <a>
-    link.href = url; // ссылка на файл
-    link.download = 'LuxWar.rar'; // задаем имя файла для загрузки
-    link.click(); // инициируем клик по ссылке для загрузки
+    const url = 'https://drive.google.com/uc?export=download&id=1lvwTbq5PAQuNhzl1_B-GCHp1OdGCF433'; // Прямая ссылка
+    const link = document.createElement('a'); 
+    link.href = url;
+    link.setAttribute('download', 'LuxWar.rar');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
+
