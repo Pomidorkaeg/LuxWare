@@ -53,11 +53,10 @@ body {
 
 .content-wrapper {
     display: flex;
-    align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+    align-items: center;
+    gap: 30px; /* Отступ между кнопками и изображением */
+    flex-wrap: wrap; /* Адаптация для мобильных устройств */
 }
 
 .text-content {
@@ -68,26 +67,26 @@ body {
 }
 
 .image-content {
-    flex: 1;
-    text-align: right;
+    max-width: 350px; /* Ограничиваем размер изображения */
 }
 
 .image-content img {
-    max-width: 100%;
+    width: 100%; /* Чтобы изображение подстраивалось под контейнер */
     height: auto;
     border-radius: 10px;
 }
 
+
 .additional-image {
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     z-index: 5;
 }
 
 .additional-image img {
-    max-width: 250px; /* Ограничение по ширине для дополнительного изображения */
+    max-width: 200px; /* Ограничение по ширине для дополнительного изображения */
     height: auto;
     border-radius: 10px;
 }
@@ -150,18 +149,47 @@ p {
     }
 }
 
-/* Применяем анимацию к кнопке */
+/* Применяем анимацию к тексту кнопки */
 .download-button {
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: #fff; /* Белый цвет текста */
-    background: #FF1A1A; /* Ярко-красный фон */
-    border: none;
+    color: #FF4500; /* Красно-оранжевый оттенок для выделения */
+    background: none;
+    border: 2px solid #FF4500;
     border-radius: 50px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
     text-transform: uppercase;
-    animation: button-wave 1.2s ease-in-out infinite;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
+    animation: text-glow 1.5s ease-in-out infinite alternate, button-float 1.5s ease-in-out infinite;
+}
+
+/* Анимация свечения */
+@keyframes text-glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 60px rgba(255, 69, 0, 0.9);
+    }
+}
+
+/* Анимация плавного движения вверх-вниз */
+@keyframes button-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.download-button:hover {
+    transform: scale(1.1);
 }
 
 .download-button:hover {
@@ -194,6 +222,14 @@ p {
     border-radius: 10px;
 }
 
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
 /* Медиазапросы для респонсивности */
 @media (max-width: 768px) {
     .logo {
@@ -221,4 +257,51 @@ p {
     h1, h2 {
         font-size: 1.2rem; /* Уменьшаем шрифт заголовков на очень маленьких экранах */
     }
+}
+
+/* Стили для всплывающего окна */
+.modal {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: #7B001C;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+}
+
+.modal-content {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #FF4500;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #D10000;
+}
+
+/* Стили для списка */
+.modal-content ol {
+    padding-left: 20px;
+    color: #FF4500;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.modal-content li {
+    margin-bottom: 8px;
 }

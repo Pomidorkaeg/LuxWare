@@ -14,12 +14,32 @@
 </div>
 
 <section class="section download-section">
-<h2>Скачать лоадер<span class="blood"></span></h2>
-<button class="download-button" id="downloadButton">Скачать</button>      
-<div class="image-content">
-  <img src="te.png" alt="Продукт"/>
-</div>
+  <div class="button-container">
+      <button class="download-button" id="downloadButton">Скачать Лоадер</button>
+      <button class="download-button" id="openSiteButton">Видео инструкция по скачиванию и началу игры</button>
+      <button class="download-button" id="openModalButton">Текстовая инструкция</button>
+  </div>
+  <div class="image-content">
+      <img src="te.png" alt="Продукт"/>
+  </div>
 </section>
+
+
+<!-- Всплывающее окно -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Инструкция по скачиванию LuxWar</h2>
+      <ol>
+          <li>Отключите антивирус.</li>
+          <li>Скачайте Лоадер (обязательно разархивируйте).</li>
+          <li>Запустите Steam от имени администратора (обязательно так как не будет работать).</li>
+          <li>Запустите лоадер от имени администратора, но не нажимайте кнопку с активацией чита.</li>
+          <li>Запустите CS2 и только после этого инджектите чит.</li>
+      </ol>
+  </div>
+</div>
+
 
     <script src="script.js"></script>
 </body>

@@ -23,5 +23,26 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     document.body.removeChild(link);
 });
 
+// Кнопка "Перейти на сайт"
+document.getElementById('openSiteButton').addEventListener('click', function() {
+    window.location.href = 'https://www.youtube.com/watch?v=JUY6zWSFEUE'; // Замени ссылку на нужную
+});
 
+// Всплывающее окно
+document.getElementById('openModalButton').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+// Закрытие окна
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+// Закрытие окна при клике вне его
+window.addEventListener('click', function(event) {
+    let modal = document.getElementById('modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
