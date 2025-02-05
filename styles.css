@@ -1,28 +1,29 @@
+/* Общие стили */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: #c0c0c0; /* Темно-серый текст */
     overflow-y: scroll;
     height: 100vh;
-    background-color: #7B001C;
+    background-color: #2B000C; /* Очень темный бордовый */
     user-select: none;
 }
 
-/* Логотип в левом верхнем углу */
+/* Логотип */
 .logo {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 2rem; /* Размер шрифта */
-    font-weight: 600; /* Толщина шрифта */
-    color: #FF1A1A; /* Яркий красный цвет */
-    text-transform: uppercase; /* Преобразуем в верхний регистр */
-    letter-spacing: 2px; /* Увеличиваем межбуквенный интервал */
-    z-index: 10; /* Убедимся, что логотип будет поверх других элементов */
-    padding: 5px 10px; /* Немного отступов */
+    font-size: 2rem;
+    font-weight: 600;
+    color: #A70023; /* Темный красный */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10;
+    padding: 5px 10px;
 }
 
-/* Остальные стили */
+/* Секции */
 .section {
     height: 100vh;
     display: flex;
@@ -32,13 +33,9 @@ body {
     padding: 0 20px;
     opacity: 1;
     transform: translateY(0);
-    background-color: #7B001C;
+    background-color: #2B000C; /* Очень темный фон */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    text-align: center; /* добавлено для выравнивания текста по центру */
-}
-
-.download-section .image-content {
-    display: block; /* меняем display на block, чтобы картинка появилась */
+    text-align: center;
 }
 
 .container {
@@ -47,181 +44,131 @@ body {
     height: 100vh;
 }
 
-.welcome-section, .reviews-section, .download-section {
-    background: #7B001C;
+.welcome-section,
+.reviews-section,
+.download-section {
+    background: #2B000C; /* Очень темный фон */
 }
 
+/* Контент секций */
 .content-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Отступ между кнопками и изображением */
-    flex-wrap: wrap; /* Адаптация для мобильных устройств */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .text-content {
-    text-align: center;
     flex: 1;
     padding-right: 20px;
     text-align: center;
 }
 
 .image-content {
-    max-width: 350px; /* Ограничиваем размер изображения */
+    max-width: 350px;
 }
 
 .image-content img {
-    width: 100%; /* Чтобы изображение подстраивалось под контейнер */
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-
 .additional-image {
     position: absolute;
     right: 20px;
-    top: 30%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 5;
 }
 
 .additional-image img {
-    max-width: 200px; /* Ограничение по ширине для дополнительного изображения */
+    max-width: 200px;
     height: auto;
     border-radius: 10px;
 }
 
-h1, h2 {
+/* Заголовки */
+h1,
+h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #FF1A1A;
+    color: #A70023; /* Темный красный */
     animation: wave 1.2s ease-in-out infinite, text-glow 1.5s ease-in-out infinite alternate;
     padding: 0 20px;
 }
 
-/* Анимации */
 @keyframes wave {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-5px);
     }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 @keyframes text-glow {
     0% {
-        text-shadow: 0 0 10px rgba(255, 26, 26, 0.8), 0 0 20px rgba(255, 26, 26, 0.6);
+        text-shadow: 0 0 3px rgba(80, 0, 10, 0.6), 0 0 6px rgba(80, 0, 10, 0.4);
     }
     100% {
-        text-shadow: 0 0 30px rgba(255, 26, 26, 1), 0 0 60px rgba(255, 26, 26, 0.9);
+        text-shadow: 0 0 6px rgba(80, 0, 10, 0.8), 0 0 10px rgba(80, 0, 10, 0.6);
     }
 }
 
+/* Текст */
 p {
     font-size: 1.1rem;
     max-width: 600px;
-    margin: 0 auto;
-    color: #FFF;
+    margin: 0 auto 30px;
+    color: #a0a0a0; /* Темно-серый текст */
     line-height: 1.6;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-/* Анимация для кнопки */
-@keyframes button-wave {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Применяем анимацию к тексту кнопки */
+/* Кнопка */
 .download-button {
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: #FF4500; /* Красно-оранжевый оттенок для выделения */
+    color: #FF8F6F; /* Очень приглушенный оранжево-красный */
     background: none;
-    border: 2px solid #FF4500;
+    border: 2px solid #FF8F6F;
     border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
-    animation: text-glow 1.5s ease-in-out infinite alternate, button-float 1.5s ease-in-out infinite;
+    text-shadow: 0 0 3px rgba(80, 0, 10, 0.6), 0 0 6px rgba(80, 0, 10, 0.4);
+    animation: button-float 1.5s ease-in-out infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Анимация свечения */
-@keyframes text-glow {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
-    }
-    100% {
-        text-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 60px rgba(255, 69, 0, 0.9);
-    }
-}
-
-/* Анимация плавного движения вверх-вниз */
 @keyframes button-float {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 .download-button:hover {
     transform: scale(1.1);
+    background: #4B0012; /* Очень темный красный при наведении */
 }
 
-.download-button:hover {
-    background: #D10000; /* Тёмно-красный фон при наведении */
-    transform: scale(1.1);
-}
-
-/* Стили для секции с кнопкой и изображением */
+/* Секция загрузки */
 .download-section {
-    background: linear-gradient(45deg, #7B001C, #FF1A1A);
+    background: linear-gradient(45deg, #2B000C, #A70023); /* Очень темный градиент */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
 }
-
-.download-section .text-content {
-    text-align: center;
-    margin-right: 20px;
-}
-
-.download-section .image-content {
-    display: block;
-}
-
-.download-section .image-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 
 .button-container {
     display: flex;
@@ -230,38 +177,37 @@ p {
     gap: 15px;
 }
 
-/* Медиазапросы для респонсивности */
+/* Медиазапросы */
 @media (max-width: 768px) {
     .logo {
-        font-size: 1.5rem; /* Уменьшаем размер шрифта на мобильных устройствах */
+        font-size: 1.5rem;
     }
-
-    .text-content, .image-content {
-        flex: 1 1 100%; /* Строки с текстом и изображением занимают 100% ширины */
+    .text-content,
+    .image-content {
+        flex: 1 1 100%;
     }
-
     .download-button {
-        width: 100%; /* Кнопка будет занимать всю ширину на мобильных устройствах */
+        width: 100%;
     }
-
-    h1, h2 {
-        font-size: 1.5rem; /* Уменьшаем шрифт заголовков */
+    h1,
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.2rem; /* Еще меньше шрифт для мобильных */
+        font-size: 1.2rem;
     }
-
-    h1, h2 {
-        font-size: 1.2rem; /* Уменьшаем шрифт заголовков на очень маленьких экранах */
+    h1,
+    h2 {
+        font-size: 1.2rem;
     }
 }
 
-/* Стили для всплывающего окна */
+/* Модальное окно */
 .modal {
-    display: none; /* Скрываем по умолчанию */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 50%;
@@ -269,15 +215,15 @@ p {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;
-    background: #7B001C;
+    background: #2B000C; /* Очень темный фон */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
 }
 
 .modal-content {
-    color: #fff;
+    color: #c0c0c0; /* Темно-серый текст */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -286,18 +232,17 @@ p {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
-    color: #FF4500;
+    color: #FF8F6F; /* Очень приглушенный красный */
     cursor: pointer;
 }
 
 .close:hover {
-    color: #D10000;
+    color: #4B0012; /* Очень темный красный при наведении */
 }
 
-/* Стили для списка */
 .modal-content ol {
     padding-left: 20px;
-    color: #FF4500;
+    color: #FF8F6F; /* Очень приглушенный красный */
     font-size: 1rem;
     line-height: 1.6;
 }
