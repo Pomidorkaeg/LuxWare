@@ -50,7 +50,6 @@ body {
     background: #2B000C; /* Очень темный фон */
 }
 
-/* Контент секций */
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -66,13 +65,13 @@ body {
 }
 
 .image-content {
-    max-width: 350px;
+    max-width: 500px; /* Увеличили размер основного изображения */
 }
 
 .image-content img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .additional-image {
@@ -84,9 +83,20 @@ body {
 }
 
 .additional-image img {
-    max-width: 200px;
+    max-width: 300px; /* Увеличили размер дополнительного изображения */
     height: auto;
     border-radius: 10px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .image-content {
+        max-width: 100%; /* На маленьких экранах изображение занимает всю ширину */
+    }
+
+    .additional-image {
+        display: none; /* Скрываем дополнительное изображение на маленьких экранах */
+    }
 }
 
 /* Заголовки */
