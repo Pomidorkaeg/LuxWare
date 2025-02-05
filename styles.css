@@ -50,6 +50,7 @@ body {
     background: #2B000C; /* Очень темный фон */
 }
 
+/* Контент секций */
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -65,7 +66,7 @@ body {
 }
 
 .image-content {
-    max-width: 500px; /* Увеличили размер основного изображения */
+    max-width: 800px; /* Увеличили размер основного изображения до 800px */
 }
 
 .image-content img {
@@ -83,7 +84,7 @@ body {
 }
 
 .additional-image img {
-    max-width: 300px; /* Увеличили размер дополнительного изображения */
+    max-width: 400px; /* Увеличили размер дополнительного изображения до 400px */
     height: auto;
     border-radius: 10px;
 }
@@ -91,11 +92,22 @@ body {
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .image-content {
-        max-width: 100%; /* На маленьких экранах изображение занимает всю ширину */
+        max-width: 100%; /* На маленьких экранах изображение занимает всю доступную ширину */
     }
 
     .additional-image {
         display: none; /* Скрываем дополнительное изображение на маленьких экранах */
+    }
+}
+
+/* Для больших экранов */
+@media (min-width: 1200px) {
+    .image-content {
+        max-width: 1000px; /* На больших экранах увеличиваем размер до 1000px */
+    }
+
+    .additional-image img {
+        max-width: 500px; /* Увеличиваем размер дополнительного изображения до 500px */
     }
 }
 
