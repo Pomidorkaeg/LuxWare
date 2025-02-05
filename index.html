@@ -8,38 +8,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Логотип в левом верхнем углу -->
-<div class="logo">
-  LuxWar
+<!-- Контейнер для логотипа и кнопки "Почему мы?" -->
+<div class="header">
+  <div class="logo">
+    LuxWar
+  </div>
+  <button class="why-us-button">Почему мы?</button>
 </div>
 
-<section class="section download-section">
-  <div class="button-container">
-      <button class="download-button" id="downloadButton">Скачать Лоадер</button>
-      <button class="download-button" id="openSiteButton">Видео инструкция по скачиванию и началу игры</button>
-      <button class="download-button" id="openModalButton">Текстовая инструкция</button>
-  </div>
-  <div class="image-content">
-      <img src="te.png" alt="Продукт"/>
-  </div>
-</section>
 
+  <section class="section download-section">
+    <div class="button-container">
+        <button class="download-button" id="downloadButton">Скачать Лоадер</button>
+        <button class="download-button" id="openSiteButton">Видео инструкция по скачиванию и началу игры</button>
+        <button class="download-button" id="openModalButton">Текстовая инструкция</button>
+    </div>
+    <div class="image-content">
+        <img src="te.png" alt="Продукт"/>
+    </div>
+  </section>
 
-<!-- Всплывающее окно -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Инструкция по скачиванию LuxWar</h2>
-      <ol>
-          <li>Отключите антивирус.</li>
-          <li>Скачайте Лоадер (обязательно разархивируйте).</li>
-          <li>Запустите Steam от имени администратора (обязательно так как не будет работать).</li>
-          <li>Запустите лоадер от имени администратора, но не нажимайте кнопку с активацией чита.</li>
-          <li>Запустите CS2 и только после этого инджектите чит.</li>
-      </ol>
+  <!-- Скрытая секция "Почему мы?" -->
+  <section class="section why-us-section" id="why-us-section">
+    <div class="text-content">
+      <h2>Почему именно мы?</h2>
+      <p>Мы предлагаем вам лучшую защиту и уникальные возможности для игры. В нашей команде работают профессионалы, которые понимают, как обеспечить безопасность вашего игрового опыта.</p>
+      <div class="image-gallery">
+        <img src="image1.jpg" alt="Фото 1">
+        <img src="image2.jpg" alt="Фото 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Всплывающее окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Инструкция по скачиванию LuxWar</h2>
+        <ol>
+            <li>Отключите антивирус.</li>
+            <li>Скачайте Лоадер (обязательно разархивируйте).</li>
+            <li>Запустите Steam от имени администратора (обязательно так как не будет работать).</li>
+            <li>Запустите лоадер от имени администратора, но не нажимайте кнопку с активацией чита.</li>
+            <li>Запустите CS2 и только после этого инджектите чит.</li>
+        </ol>
+    </div>
   </div>
-</div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

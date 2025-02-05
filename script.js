@@ -1,18 +1,22 @@
-// Отключаем правый клик
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault(); // Останавливаем контекстное меню
+// Переключение видимости секции "Почему мы?"
+document.getElementById('whyUsButton').addEventListener('click', function() {
+    const section = document.getElementById('why-us-section');
+    const body = document.body;
+
+    // Переключаем отображение секции "Почему мы?"
+    if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+        body.classList.remove('no-scroll'); // Разрешаем прокрутку
+    } else {
+        section.style.display = 'none';
+        body.classList.add('no-scroll'); // Запрещаем прокрутку
+    }
+
+    // Прокрутка страницы до секции
+    section.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Отключаем возможность копирования
-document.addEventListener('copy', function (e) {
-    e.preventDefault(); // Останавливаем копирование
-});
-
-// Запрещаем выделение текста
-document.addEventListener('selectstart', function (e) {
-    e.preventDefault(); // Останавливаем выделение текста
-});
-
+// Остальной JavaScript для открытия модальных окон и других функций
 document.getElementById('downloadButton').addEventListener('click', function() {
     const url = 'https://drive.google.com/uc?export=download&id=1lvwTbq5PAQuNhzl1_B-GCHp1OdGCF433'; // Прямая ссылка
     const link = document.createElement('a'); 
@@ -23,7 +27,6 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     document.body.removeChild(link);
 });
 
-// Кнопка "Перейти на сайт"
 document.getElementById('openSiteButton').addEventListener('click', function() {
     window.location.href = 'https://www.youtube.com/watch?v=JUY6zWSFEUE'; // Замени ссылку на нужную
 });
@@ -45,4 +48,27 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+// Перемещение кнопки "Почему мы?"
+let isDragging = false;
+let offsetX, offsetY;
 
+const whyUsButton = document.querySelector('.why-us-button');
+
+whyUsButton.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    offsetX = e.clientX - whyUsButton.getBoundingClientRect().left;
+    offsetY = e.clientY - whyUsButton.getBoundingClientRect().top;
+    document.addEventListener('mousemove', moveButton);
+});
+
+document.addEventListener('mouseup', function() {
+    isDragging = false;
+    document.removeEventListener('mousemove', moveButton);
+});
+
+function moveButton(e) {
+    if (isDragging) {
+        whyUsButton.style.left = `${e.clientX - offsetX}px`;
+        whyUsButton.style.top = `${e.clientY - offsetY}px`;
+    }
+}

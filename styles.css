@@ -9,19 +9,76 @@ body {
     user-select: none;
 }
 
-/* Логотип */
-.logo {
+/* Логотип и кнопка "Почему мы?" */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+  }
+  
+/* Контейнер для логотипа и кнопки */
+.header {
     position: absolute;
     top: 20px;
     left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Логотип */
+.logo {
     font-size: 2rem;
     font-weight: 600;
     color: #A70023; /* Темный красный */
     text-transform: uppercase;
     letter-spacing: 2px;
-    z-index: 10;
     padding: 5px 10px;
 }
+
+/* Кнопка "Почему мы?" */
+.why-us-button {
+    margin-left: 80px; /* Расстояние между логотипом и кнопкой */
+    font-size: 1rem;
+    color: #A70023;
+    background: none;
+    border: none; /* Убираем обводку */
+    padding: 0; /* Убираем внутренние отступы */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.why-us-button:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+  
+  /* Скрытая секция "Почему мы?" */
+  #why-us-section {
+    display: none; /* Скрыта по умолчанию */
+    background-color: #2B000C; /* Тот же цвет, что и фон сайта */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    transition: max-height 0.5s ease-out;
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .image-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
 
 /* Секции */
 .section {
