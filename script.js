@@ -1,5 +1,5 @@
 // Переключение видимости секции "Почему мы?"
-document.getElementById('whyUsButton').addEventListener('click', function() {
+document.querySelector('.why-us-button').addEventListener('click', function() {
     const section = document.getElementById('why-us-section');
     const body = document.body;
 
@@ -48,6 +48,7 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
 // Перемещение кнопки "Почему мы?"
 let isDragging = false;
 let offsetX, offsetY;
