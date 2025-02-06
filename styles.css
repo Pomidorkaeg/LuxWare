@@ -41,7 +41,7 @@ body {
 
 /* Кнопка "Почему мы?" */
 .why-us-button {
-    margin-left: 80px; /* Расстояние между логотипом и кнопкой */
+    margin-left: 200px; /* Расстояние между логотипом и кнопкой */
     font-size: 1rem;
     color: #A70023;
     background: none;
