@@ -106,3 +106,28 @@ document.querySelectorAll('.social-media-img').forEach(function(img) {
         window.open(url, '_blank'); // Открываем ссылку в новой вкладке
     });
 });
+
+// Открытие модального окна
+document.querySelector('.social-media-button').addEventListener('click', function() {
+    document.getElementById('socialMediaModal').style.display = 'block';
+});
+
+// Закрытие модального окна при клике на крестик
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('socialMediaModal').style.display = 'none';
+});
+
+// Закрытие модального окна при клике вне его
+window.addEventListener('click', function(event) {
+    var modal = document.getElementById('socialMediaModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Закрытие модального окна при клике на крестик
+document.querySelectorAll('.close').forEach(function(button) {
+    button.addEventListener('click', function() {
+        button.closest('.modal').style.display = 'none';
+    });
+});

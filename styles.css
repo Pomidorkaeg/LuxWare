@@ -410,3 +410,72 @@ p {
 .modal-content li {
     margin-bottom: 8px;
 }
+/* Кнопка "Социальные сети" */
+.social-media-button {
+    margin-left: 30px; /* Расстояние между кнопками */
+    font-size: 1rem;
+    color: #A70023;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.social-media-button:hover {
+    text-decoration: underline;
+}
+
+/* Стили для модального окна социальных сетей */
+#socialMediaModal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: #2B000C;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
+}
+
+.modal-content {
+    color: #c0c0c0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #FF8F6F;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #4B0012;
+}
+
+.modal-content ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.modal-content li {
+    margin: 10px 0;
+}
+
+.modal-content a {
+    color: #FF8F6F;
+    text-decoration: none;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
