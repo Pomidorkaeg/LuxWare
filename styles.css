@@ -23,12 +23,12 @@ body {
 .header {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Корректировка для точного выравнивания */
     display: flex;
     align-items: center;
     z-index: 10;
 }
-
 /* Кнопки в заголовке */
 .header button {
     margin-left: 30px; /* Расстояние между кнопками */
