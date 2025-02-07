@@ -19,7 +19,7 @@ body {
     z-index: 10;
   }
   
-/* Контейнер для логотипа и кнопки */
+/* Логотип и кнопки на одной линии */
 .header {
     position: absolute;
     top: 20px;
@@ -27,6 +27,85 @@ body {
     display: flex;
     align-items: center;
     z-index: 10;
+}
+
+/* Кнопки в заголовке */
+.header button {
+    margin-left: 30px; /* Расстояние между кнопками */
+    font-size: 1rem;
+    color: #A70023;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header button:hover {
+    text-decoration: underline;
+}
+
+/* Стили для кнопки "Инструкция" */
+.instruction-button {
+    font-size: 1rem;
+    color: #A70023;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.instruction-button:hover {
+    text-decoration: underline;
+}
+
+/* Модальное окно для инструкции */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: #2B000C;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
+}
+
+.modal-content {
+    color: #c0c0c0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #FF8F6F;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #4B0012;
+}
+
+.modal-content ol {
+    padding-left: 20px;
+    color: #FF8F6F;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.modal-content li {
+    margin-bottom: 8px;
 }
 
 /* Логотип */

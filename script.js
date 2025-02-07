@@ -27,26 +27,15 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     document.body.removeChild(link);
 });
 
+// Остальной JavaScript для открытия модальных окон и других функций
 document.getElementById('openSiteButton').addEventListener('click', function() {
-    window.location.href = 'https://www.youtube.com/watch?v=JUY6zWSFEUE'; // Замени ссылку на нужную
-});
-
-// Всплывающее окно
-document.getElementById('openModalButton').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'block';
-});
-
-// Закрытие окна
-document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-});
-
-// Закрытие окна при клике вне его
-window.addEventListener('click', function(event) {
-    let modal = document.getElementById('modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
+    const url = 'https://drive.google.com/uc?export=download&id=1p_HoTLFNFU0cpAjqJcsYjv7c-YglPOmB'; // Прямая ссылка
+    const link = document.createElement('a'); 
+    link.href = url;
+    link.setAttribute('download', 'cfg.rar');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
 
 // Перемещение кнопки "Почему мы?"
@@ -73,3 +62,47 @@ function moveButton(e) {
         whyUsButton.style.top = `${e.clientY - offsetY}px`;
     }
 }
+
+// Открытие модального окна с инструкцией
+document.querySelector('.instruction-button').addEventListener('click', function() {
+    document.getElementById('instructionModal').style.display = 'block';
+});
+
+// Закрытие окна
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('instructionModal').style.display = 'none';
+});
+
+// Закрытие окна при клике вне его
+window.addEventListener('click', function(event) {
+    let modal = document.getElementById('instructionModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Открытие модального окна "Соц.сети"
+document.querySelector('.social-media-button').addEventListener('click', function() {
+    document.getElementById('socialMediaModal').style.display = 'block';
+});
+
+// Закрытие модального окна "Соц.сети"
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('socialMediaModal').style.display = 'none';
+});
+
+// Закрытие окна при клике вне его
+window.addEventListener('click', function(event) {
+    let modal = document.getElementById('socialMediaModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Открытие выбранной соц.сети при клике на изображение
+document.querySelectorAll('.social-media-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        const url = img.getAttribute('data-url');
+        window.open(url, '_blank'); // Открываем ссылку в новой вкладке
+    });
+});

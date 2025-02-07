@@ -8,20 +8,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Контейнер для логотипа и кнопки "Почему мы?" -->
-<div class="header">
-  <div class="logo">
-    LuxWar
+  <div class="header">
+    <div class="logo">
+      LuxWar
+    </div>
+    <button class="why-us-button">Почему мы?</button>
+    <button class="instruction-button">Инструкция</button> <!-- Новая кнопка -->
   </div>
-  <button class="why-us-button">Почему мы?</button>
+
+  <!-- Модальное окно с инструкцией -->
+<div id="instructionModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Инструкция по запуску чит-программы LuxWar</h2>
+      <ol>
+          <li>Отключите антивирус, чтобы избежать блокировки.</li>
+          <li>Скачайте и разархивируйте Лоадер.</li>
+          <li>Запустите Steam от имени администратора.</li>
+          <li>Запустите Лоадер от имени администратора, но не нажимайте на кнопку активации чита.</li>
+          <li>Запустите CS2 и только после этого инджектите чит.</li>
+      </ol>
+  </div>
 </div>
 
 
   <section class="section download-section">
     <div class="button-container">
         <button class="download-button" id="downloadButton">Скачать Лоадер</button>
-        <button class="download-button" id="openSiteButton">Видео инструкция по скачиванию и началу игры</button>
-        <button class="download-button" id="openModalButton">Текстовая инструкция</button>
+        <button class="download-button" id="openSiteButton">Скачать настройки</button>
     </div>
     <div class="image-content">
         <img src="te.png" alt="Продукт"/>
@@ -58,3 +72,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
