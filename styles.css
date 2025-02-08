@@ -135,15 +135,14 @@ body {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
   
-  /* Скрытая секция "Почему мы?" */
-  #why-us-section {
+#why-us-section {
     display: none; /* Скрыта по умолчанию */
-    background-color: #2B000C; /* Тот же цвет, что и фон сайта */
+    background: linear-gradient(45deg, #2B000C, #A70023); /* Градиент, как в других секциях */
     color: #fff;
     padding: 40px 20px;
     text-align: center;
     transition: max-height 0.5s ease-out;
-  }
+}
   
   .image-gallery {
     display: flex;
@@ -478,4 +477,46 @@ p {
 
 .modal-content a:hover {
     text-decoration: underline;
+}
+
+/* Стили для секции "Почему мы?" */
+.why-us-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем плашки по горизонтали */
+    gap: 15px; /* Уменьшаем расстояние между плашками */
+    margin-top: 20px;
+    max-width: 800px; /* Ограничиваем ширину контейнера */
+    margin-left: auto;
+    margin-right: auto; /* Центрируем контейнер */
+}
+
+.why-us-point {
+    background-color: #1A0008; /* Темный фон для пункта */
+    border: 2px solid #A70023; /* Граница в стиле сайта */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px 15px; /* Уменьшаем внутренние отступы */
+    box-shadow: 0 0 10px rgba(167, 0, 35, 0.4); /* Тень в тон границы */
+    color: #c0c0c0; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+    width: 100%; /* Плашки занимают всю ширину контейнера */
+    max-width: 600px; /* Ограничиваем максимальную ширину плашек */
+}
+
+.why-us-point:hover {
+    transform: translateY(-5px); /* Эффект поднятия при наведении */
+    box-shadow: 0 0 15px rgba(167, 0, 35, 0.8); /* Усиление тени при наведении */
+}
+
+.why-us-point h3 {
+    color: #A70023; /* Цвет заголовка пункта */
+    margin-bottom: 8px; /* Уменьшаем отступ снизу */
+    font-size: 1.1rem; /* Уменьшаем размер шрифта заголовка */
+    text-shadow: 0 0 5px rgba(167, 0, 35, 0.6); /* Тень для текста */
+}
+
+.why-us-point p {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта текста */
+    line-height: 1.4; /* Уменьшаем межстрочный интервал */
 }
