@@ -17,24 +17,26 @@ body {
     top: 0px;
     left: 0px;
     z-index: 10;
+    background: none;
   }
   
-/* Логотип и кнопки на одной линии */
+/* Уберите фон у заголовка */
 .header {
-    position: absolute;
-    top: 20px;
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Корректировка для точного выравнивания */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    z-index: 10;
+    gap: 10px;
+    text-align: center;
+    background: none; /* Убедитесь, что фон отсутствует */
 }
-/* Кнопки в заголовке */
+
+/* Уберите фон у кнопок */
 .header button {
-    margin-left: 30px; /* Расстояние между кнопками */
+    margin-left: 30px;
     font-size: 1rem;
     color: #A70023;
-    background: none;
+    background: none; /* Убедитесь, что фон отсутствует */
     border: none;
     padding: 0;
     cursor: pointer;
@@ -44,6 +46,7 @@ body {
 
 .header button:hover {
     text-decoration: underline;
+    background: none; /* Убедитесь, что фон отсутствует при наведении */
 }
 
 /* Стили для кнопки "Инструкция" */
@@ -56,10 +59,12 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
+    background: none;
 }
 
 .instruction-button:hover {
     text-decoration: underline;
+    background: none;
 }
 
 /* Модальное окно для инструкции */
@@ -77,6 +82,7 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
+    background: none;
 }
 
 .modal-content {
@@ -108,14 +114,15 @@ body {
     margin-bottom: 8px;
 }
 
-/* Логотип */
+/* Уберите фон у логотипа */
 .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #A70023; /* Темный красный */
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 5px 10px;
+    background: none; /* Убедитесь, что фон отсутствует */
 }
 
 /* Кнопка "Почему мы?" */
@@ -168,7 +175,7 @@ body {
     padding: 0 20px;
     opacity: 1;
     transform: translateY(0);
-    background-color: #2B000C; /* Очень темный фон */
+    background: none; /* Очень темный фон */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     text-align: center;
 }
@@ -206,10 +213,10 @@ body {
 
 .image-content img {
     width: 100%;
+    max-width: 300px; /* Уменьшаем размер на мобильных */
     height: auto;
-    border-radius: 10px;
-    max-width: 400px; /* Уменьшаем максимальную ширину изображения */
 }
+
 
 
 .additional-image {
@@ -286,11 +293,14 @@ p {
     margin: 0 auto 30px;
     color: #a0a0a0; /* Темно-серый текст */
     line-height: 1.6;
+    padding: 0 15px;
     text-align: center;
 }
 
 /* Кнопка */
 .download-button {
+    width: 100%;
+    max-width: 300px;
     padding: 15px 30px;
     font-size: 1.2rem;
     color: #FF8F6F; /* Очень приглушенный оранжево-красный */
