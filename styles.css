@@ -1,12 +1,24 @@
 /* Общие стили */
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Фон на всю высоту страницы */
     font-family: 'Poppins', sans-serif;
-    color: #c0c0c0; /* Темно-серый текст */
-    overflow-y: scroll;
-    height: auto;
-    background: linear-gradient(45deg, #2B000C, #A70023); /* Градиентный фон для всего body */
+    color: #c0c0c0;
+    background: linear-gradient(45deg, #2B000C, #A70023);
     user-select: none;
+}
+
+/* Затемнение фона при открытии модального окна */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    z-index: 999; /* Ниже модального окна, но выше всего остального */
 }
 
 /* Уберите фон у заголовка */
@@ -55,7 +67,6 @@ body {
     background: none;
 }
 
-/* Модальное окно для инструкции */
 .modal {
     display: none;
     position: fixed;
@@ -65,13 +76,12 @@ body {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;
-    background: #2B000C; /* Фон модального окна */
+    background: #2B000C;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
 }
-
 .modal-content {
     color: #c0c0c0;
     font-family: 'Poppins', sans-serif;
@@ -129,27 +139,34 @@ body {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
 
+/* Стили для секции "Почему мы?" */
 #why-us-section {
     display: none; /* Скрыта по умолчанию */
     color: #fff;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Отступы от краев экрана */
     text-align: center;
     transition: max-height 0.5s ease-out;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px; /* Расстояние между изображениями */
     margin-top: 20px;
+    flex-wrap: wrap; /* Если изображения не помещаются, они переносятся на новую строку */
+    padding: 0 20px; /* Отступы от краев экрана */
 }
 
 .image-gallery img {
-    width: 200px;
+    max-width: 100%; /* Изображения не превышают ширину контейнера */
     height: auto;
     border-radius: 10px;
+    flex: 1 1 calc(50% - 40px); /* Автоматическое распределение по ширине с отступами */
+    max-width: 300px; /* Максимальная ширина изображения */
 }
-
 /* Секции */
 .section {
     height: 100vh;
@@ -473,26 +490,29 @@ p {
     text-decoration: underline;
 }
 
-/* Стили для секции "Почему мы?" */
+
 .why-us-points {
     display: flex;
     flex-direction: column;
     align-items: center; /* Центрируем плашки по горизонтали */
-    gap: 15px; /* Уменьшаем расстояние между плашками */
+    gap: 15px; /* Расстояние между плашками */
     margin-top: 20px;
-    max-width: 800px; /* Ограничиваем ширину контейнера */
+    max-width: 1200px; /* Ограничиваем ширину контейнера */
     margin-left: auto;
     margin-right: auto; /* Центрируем контейнер */
+    width: 100%; /* Занимает всю доступную ширину */
+    padding: 0 20px; /* Отступы от краев экрана */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
 .why-us-point {
     background-color: #1A0008; /* Темный фон для пункта */
     border: 2px solid #A70023; /* Граница в стиле сайта */
     border-radius: 10px; /* Закругленные углы */
-    padding: 10px 15px; /* Уменьшаем внутренние отступы */
+    padding: 20px; /* Внутренние отступы */
     box-shadow: 0 0 10px rgba(167, 0, 35, 0.4); /* Тень в тон границы */
     color: #c0c0c0; /* Цвет текста */
-    text-align: left; /* Выравнивание текста по левому краю */
+    text-align: center; /* Выравнивание текста по центру */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
     width: 100%; /* Плашки занимают всю ширину контейнера */
     max-width: 600px; /* Ограничиваем максимальную ширину плашек */
@@ -505,13 +525,13 @@ p {
 
 .why-us-point h3 {
     color: #A70023; /* Цвет заголовка пункта */
-    margin-bottom: 8px; /* Уменьшаем отступ снизу */
-    font-size: 1.1rem; /* Уменьшаем размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 1.2rem; /* Размер шрифта заголовка */
     text-shadow: 0 0 5px rgba(167, 0, 35, 0.6); /* Тень для текста */
 }
 
 .why-us-point p {
-    font-size: 0.9rem; /* Уменьшаем размер шрифта текста */
-    line-height: 1.4; /* Уменьшаем межстрочный интервал */
+    font-size: 1rem; /* Размер шрифта текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    margin: 0; /* Убираем отступы по умолчанию */
 }
-

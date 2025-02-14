@@ -132,3 +132,48 @@ document.querySelectorAll('.close').forEach(function(button) {
     });
 });
 
+// Функция для открытия модального окна
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const overlay = document.querySelector('.modal-overlay');
+
+    // Закрываем все открытые модальные окна
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.style.display = 'none';
+    });
+
+    // Открываем выбранное модальное окно и затемняем фон
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Функция для закрытия модального окна
+function closeModal() {
+    const overlay = document.querySelector('.modal-overlay');
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.style.display = 'none';
+    });
+    overlay.style.display = 'none';
+}
+
+// Открытие модального окна с инструкцией
+document.querySelector('.instruction-button').addEventListener('click', function() {
+    openModal('instructionModal');
+});
+
+// Открытие модального окна "Соц.сети"
+document.querySelector('.social-media-button').addEventListener('click', function() {
+    openModal('socialMediaModal');
+});
+
+// Закрытие модального окна при клике на крестик
+document.querySelectorAll('.close').forEach(button => {
+    button.addEventListener('click', closeModal);
+});
+
+// Закрытие модального окна при клике вне его
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal-overlay')) {
+        closeModal();
+    }
+});
