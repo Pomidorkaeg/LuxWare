@@ -131,3 +131,4 @@ document.querySelectorAll('.close').forEach(function(button) {
         button.closest('.modal').style.display = 'none';
     });
 });
+

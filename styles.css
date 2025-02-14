@@ -4,22 +4,11 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #c0c0c0; /* Темно-серый текст */
     overflow-y: scroll;
-    height: 100vh;
-    background-color: #2B000C; /* Очень темный бордовый */
+    height: auto;
+    background: linear-gradient(45deg, #2B000C, #A70023); /* Градиентный фон для всего body */
     user-select: none;
 }
 
-/* Логотип и кнопка "Почему мы?" */
-.logo-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    background: none;
-  }
-  
 /* Уберите фон у заголовка */
 .header {
     display: flex;
@@ -35,7 +24,7 @@ body {
 .header button {
     margin-left: 30px;
     font-size: 1rem;
-    color: #A70023;
+    color: #FF8F6F;
     background: none; /* Убедитесь, что фон отсутствует */
     border: none;
     padding: 0;
@@ -52,14 +41,13 @@ body {
 /* Стили для кнопки "Инструкция" */
 .instruction-button {
     font-size: 1rem;
-    color: #A70023;
+    color: #2B000C;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    background: none;
 }
 
 .instruction-button:hover {
@@ -77,12 +65,11 @@ body {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;
-    background: #2B000C;
+    background: #2B000C; /* Фон модального окна */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
-    background: none;
 }
 
 .modal-content {
@@ -118,7 +105,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #A70023; /* Темный красный */
+    color: #FF8F6F; /* Темный красный */
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 5px 10px;
@@ -129,7 +116,7 @@ body {
 .why-us-button {
     margin-left: 600px; /* Расстояние между логотипом и кнопкой */
     font-size: 1rem;
-    color: #A70023;
+    color: #2B000C;
     background: none;
     border: none; /* Убираем обводку */
     padding: 0; /* Убираем внутренние отступы */
@@ -141,29 +128,27 @@ body {
 .why-us-button:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
-  
+
 #why-us-section {
     display: none; /* Скрыта по умолчанию */
-    background: linear-gradient(45deg, #2B000C, #A70023); /* Градиент, как в других секциях */
     color: #fff;
     padding: 40px 20px;
     text-align: center;
     transition: max-height 0.5s ease-out;
 }
-  
-  .image-gallery {
+
+.image-gallery {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-  }
-  
-  .image-gallery img {
+}
+
+.image-gallery img {
     width: 200px;
     height: auto;
     border-radius: 10px;
-  }
-  
+}
 
 /* Секции */
 .section {
@@ -175,7 +160,7 @@ body {
     padding: 0 20px;
     opacity: 1;
     transform: translateY(0);
-    background: none; /* Очень темный фон */
+    background: none; /* Уберите фон у секций */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     text-align: center;
 }
@@ -186,10 +171,11 @@ body {
     height: 100vh;
 }
 
+/* Уберите фоновые цвета у секций */
 .welcome-section,
 .reviews-section,
 .download-section {
-    background: #2B000C; /* Очень темный фон */
+    background: none; /* Уберите фоновые цвета */
 }
 
 /* Контент секций */
@@ -216,8 +202,6 @@ body {
     max-width: 300px; /* Уменьшаем размер на мобильных */
     height: auto;
 }
-
-
 
 .additional-image {
     position: absolute;
@@ -331,7 +315,6 @@ p {
 
 /* Секция загрузки */
 .download-section {
-    background: linear-gradient(45deg, #2B000C, #A70023); /* Очень темный градиент */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -419,6 +402,7 @@ p {
 .modal-content li {
     margin-bottom: 8px;
 }
+
 /* Кнопка "Социальные сети" */
 .social-media-button {
     margin-left: 30px; /* Расстояние между кнопками */
@@ -530,3 +514,4 @@ p {
     font-size: 0.9rem; /* Уменьшаем размер шрифта текста */
     line-height: 1.4; /* Уменьшаем межстрочный интервал */
 }
+
