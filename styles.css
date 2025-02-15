@@ -2,11 +2,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Фон на всю высоту страницы */
-    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
     color: #c0c0c0;
-    background: linear-gradient(45deg, #2B000C, #A70023);
-    background-attachment: fixed; /* Фиксированный фон */
+    background: #151719;
+    background-attachment: fixed;
     user-select: none;
 }
 
@@ -18,8 +18,8 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
-    z-index: 999; /* Ниже модального окна, но выше всего остального */
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
 }
 
 /* Уберите фон у заголовка */
@@ -30,25 +30,26 @@ html, body {
     align-items: center;
     gap: 10px;
     text-align: center;
-    background: none; /* Убедитесь, что фон отсутствует */
+    background: none;
 }
 
-/* Уберите фон у кнопок */
+/* Кнопки */
 .header button {
     margin-left: 30px;
     font-size: 1rem;
-    color: #FF8F6F;
-    background: none; /* Убедитесь, что фон отсутствует */
+    color: red;
+    background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
+    border-radius: 25px;
 }
 
 .header button:hover {
     text-decoration: underline;
-    background: none; /* Убедитесь, что фон отсутствует при наведении */
+    background: none;
 }
 
 /* Стили для кнопки "Инструкция" */
@@ -60,7 +61,8 @@ html, body {
     padding: 0;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 .instruction-button:hover {
@@ -79,13 +81,16 @@ html, body {
     max-width: 400px;
     background: #2B000C;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
 }
+
+/* Модальные окна */
 .modal-content {
     color: #c0c0c0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
 }
 
 .close {
@@ -93,81 +98,92 @@ html, body {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
-    color: #FF8F6F;
+    color: red;
     cursor: pointer;
 }
 
 .close:hover {
-    color: #4B0012;
+    color: red;
 }
 
 .modal-content ol {
     padding-left: 20px;
-    color: #FF8F6F;
+    color: red;
     font-size: 1rem;
     line-height: 1.6;
+    font-weight: 700;
 }
 
 .modal-content li {
     margin-bottom: 8px;
 }
 
-/* Уберите фон у логотипа */
 .logo {
+    display: flex;
+    align-items: center; /* Выравниваем логотип и текст по вертикали */
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #FF8F6F; /* Темный красный */
+    font-weight: 800;
+    color: red;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 5px 10px;
-    background: none; /* Убедитесь, что фон отсутствует */
+    background: none;
+    border-radius: 25px;
+}
+
+.logo-img {
+    width: 40px; /* Размер изображения логотипа */
+    height: auto; /* Сохраняем пропорции */
+    margin-right: 10px; /* Отступ между изображением и текстом */
 }
 
 /* Кнопка "Почему мы?" */
 .why-us-button {
-    margin-left: 600px; /* Расстояние между логотипом и кнопкой */
+    margin-left: 600px;
     font-size: 1rem;
     color: #2B000C;
     background: none;
-    border: none; /* Убираем обводку */
-    padding: 0; /* Убираем внутренние отступы */
+    border: none;
+    padding: 0;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 .why-us-button:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
 /* Стили для секции "Почему мы?" */
 #why-us-section {
-    display: none; /* Скрыта по умолчанию */
+    display: none;
     color: #fff;
-    padding: 40px 20px; /* Отступы от краев экрана */
+    padding: 40px 20px;
     text-align: center;
     transition: max-height 0.5s ease-out;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    box-sizing: border-box;
 }
 
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Расстояние между изображениями */
+    gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Если изображения не помещаются, они переносятся на новую строку */
-    padding: 0 20px; /* Отступы от краев экрана */
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .image-gallery img {
-    max-width: 100%; /* Изображения не превышают ширину контейнера */
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    flex: 1 1 calc(50% - 40px); /* Автоматическое распределение по ширине с отступами */
-    max-width: 300px; /* Максимальная ширина изображения */
+    border-radius: 15px;
+    flex: 1 1 calc(50% - 40px);
+    max-width: 300px;
 }
+
 /* Секции */
 .section {
     height: 100vh;
@@ -178,7 +194,7 @@ html, body {
     padding: 0 20px;
     opacity: 1;
     transform: translateY(0);
-    background: none; /* Уберите фон у секций */
+    background: none;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     text-align: center;
 }
@@ -193,7 +209,7 @@ html, body {
 .welcome-section,
 .reviews-section,
 .download-section {
-    background: none; /* Уберите фоновые цвета */
+    background: none;
 }
 
 /* Контент секций */
@@ -212,13 +228,14 @@ html, body {
 }
 
 .image-content {
-    max-width: 800px; /* Увеличили размер основного изображения до 800px */
+    max-width: 800px;
 }
 
 .image-content img {
     width: 100%;
-    max-width: 300px; /* Уменьшаем размер на мобильных */
+    max-width: 300px;
     height: auto;
+    border-radius: 15px;
 }
 
 .additional-image {
@@ -230,44 +247,44 @@ html, body {
 }
 
 .additional-image img {
-    max-width: 400px; /* Увеличили размер дополнительного изображения до 400px */
+    max-width: 400px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .image-content {
-        max-width: 100%; /* На маленьких экранах изображение занимает всю доступную ширину */
+        max-width: 100%;
     }
 
     .additional-image {
-        display: none; /* Скрываем дополнительное изображение на маленьких экранах */
+        display: none;
     }
 }
 
 /* Для больших экранов */
 @media (min-width: 1200px) {
     .image-content {
-        max-width: 1000px; /* На больших экранах увеличиваем размер до 1000px */
+        max-width: 1000px;
     }
 
     .additional-image img {
-        max-width: 500px; /* Увеличиваем размер дополнительного изображения до 500px */
+        max-width: 500px;
     }
 }
 
 /* Заголовки */
-h1,
-h2 {
+h1, h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #A70023; /* Темный красный */
+    color: red;
     animation: wave 1.2s ease-in-out infinite, text-glow 1.5s ease-in-out infinite alternate;
     padding: 0 20px;
+    font-weight: 800;
 }
 
 @keyframes wave {
@@ -293,25 +310,25 @@ p {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 30px;
-    color: #a0a0a0; /* Темно-серый текст */
+    color: #a0a0a0;
     line-height: 1.6;
     padding: 0 15px;
     text-align: center;
+    font-weight: 700;
 }
 
-/* Кнопка */
 .download-button {
     width: 100%;
     max-width: 300px;
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: #FF8F6F; /* Очень приглушенный оранжево-красный */
+    color: red;
     background: none;
-    border: 2px solid #FF8F6F;
+    border: 2px solid red;
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
     text-shadow: 0 0 3px rgba(80, 0, 10, 0.6), 0 0 6px rgba(80, 0, 10, 0.4);
     animation: button-float 1.5s ease-in-out infinite;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -328,7 +345,7 @@ p {
 
 .download-button:hover {
     transform: scale(1.1);
-    background: #4B0012; /* Очень темный красный при наведении */
+    background: #4B0012;
 }
 
 /* Секция загрузки */
@@ -375,55 +392,9 @@ p {
     }
 }
 
-/* Модальное окно */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    background: #2B000C; /* Очень темный фон */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
-}
-
-.modal-content {
-    color: #c0c0c0; /* Темно-серый текст */
-    font-family: 'Poppins', sans-serif;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #FF8F6F; /* Очень приглушенный красный */
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #4B0012; /* Очень темный красный при наведении */
-}
-
-.modal-content ol {
-    padding-left: 20px;
-    color: #FF8F6F; /* Очень приглушенный красный */
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.modal-content li {
-    margin-bottom: 8px;
-}
-
 /* Кнопка "Социальные сети" */
 .social-media-button {
-    margin-left: 30px; /* Расстояние между кнопками */
+    margin-left: 30px;
     font-size: 1rem;
     color: #A70023;
     background: none;
@@ -431,7 +402,8 @@ p {
     padding: 0;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 .social-media-button:hover {
@@ -440,7 +412,7 @@ p {
 
 /* Стили для модального окна социальных сетей */
 #socialMediaModal {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 50%;
@@ -450,27 +422,9 @@ p {
     max-width: 400px;
     background: #2B000C;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
-}
-
-.modal-content {
-    color: #c0c0c0;
-    font-family: 'Poppins', sans-serif;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #FF8F6F;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #4B0012;
 }
 
 .modal-content ul {
@@ -482,57 +436,61 @@ p {
     margin: 10px 0;
 }
 
+/* Социальные сети */
 .modal-content a {
-    color: #FF8F6F;
+    color: red;
     text-decoration: none;
+    font-weight: 800;
 }
 
 .modal-content a:hover {
     text-decoration: underline;
 }
 
-
 .why-us-points {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем плашки по горизонтали */
-    gap: 15px; /* Расстояние между плашками */
+    align-items: center;
+    gap: 15px;
     margin-top: 20px;
-    max-width: 1200px; /* Ограничиваем ширину контейнера */
+    max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; /* Центрируем контейнер */
-    width: 100%; /* Занимает всю доступную ширину */
-    padding: 0 20px; /* Отступы от краев экрана */
-    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    margin-right: auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .why-us-point {
-    background-color: #1A0008; /* Темный фон для пункта */
-    border: 2px solid #A70023; /* Граница в стиле сайта */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 20px; /* Внутренние отступы */
-    box-shadow: 0 0 10px rgba(167, 0, 35, 0.4); /* Тень в тон границы */
-    color: #c0c0c0; /* Цвет текста */
-    text-align: center; /* Выравнивание текста по центру */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
-    width: 100%; /* Плашки занимают всю ширину контейнера */
-    max-width: 600px; /* Ограничиваем максимальную ширину плашек */
+    background-color: #1A0008;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(167, 0, 35, 0.4);
+    color: #c0c0c0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 600px;
 }
 
 .why-us-point:hover {
-    transform: translateY(-5px); /* Эффект поднятия при наведении */
-    box-shadow: 0 0 15px rgba(167, 0, 35, 0.8); /* Усиление тени при наведении */
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(167, 0, 35, 0.8);
 }
 
+/* Плашки "Почему мы?" */
 .why-us-point h3 {
-    color: #A70023; /* Цвет заголовка пункта */
-    margin-bottom: 10px; /* Отступ снизу */
-    font-size: 1.2rem; /* Размер шрифта заголовка */
-    text-shadow: 0 0 5px rgba(167, 0, 35, 0.6); /* Тень для текста */
+    color: red;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(167, 0, 35, 0.6);
+    font-weight: 800;
 }
 
 .why-us-point p {
-    font-size: 1rem; /* Размер шрифта текста */
-    line-height: 1.5; /* Межстрочный интервал */
-    margin: 0; /* Убираем отступы по умолчанию */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 700;
 }
