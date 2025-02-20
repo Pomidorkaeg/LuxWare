@@ -37,7 +37,7 @@ html, body {
 .header button {
     margin-left: 30px;
     font-size: 1rem;
-    color: red;
+    color: whitesmoke;
     background: none;
     border: none;
     padding: 0;
@@ -55,7 +55,7 @@ html, body {
 /* Стили для кнопки "Инструкция" */
 .instruction-button {
     font-size: 1rem;
-    color: #2B000C;
+    color: black;
     background: none;
     border: none;
     padding: 0;
@@ -79,11 +79,11 @@ html, body {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;
-    background: #2B000C;
+    background: black;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
+    box-shadow: black;
 }
 
 /* Модальные окна */
@@ -98,17 +98,17 @@ html, body {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
-    color: red;
+    color: whitesmoke;
     cursor: pointer;
 }
 
 .close:hover {
-    color: red;
+    color: whitesmoke;
 }
 
 .modal-content ol {
     padding-left: 20px;
-    color: red;
+    color: whitesmoke;
     font-size: 1rem;
     line-height: 1.6;
     font-weight: 700;
@@ -123,7 +123,7 @@ html, body {
     align-items: center; /* Выравниваем логотип и текст по вертикали */
     font-size: 1.5rem;
     font-weight: 800;
-    color: red;
+    color: whitesmoke;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 5px 10px;
@@ -141,7 +141,7 @@ html, body {
 .why-us-button {
     margin-left: 600px;
     font-size: 1rem;
-    color: #2B000C;
+    color: wheat;
     background: none;
     border: none;
     padding: 0;
@@ -281,7 +281,7 @@ h1, h2 {
     font-family: 'Nunito', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: red;
+    color: whitesmoke;
     animation: wave 1.2s ease-in-out infinite, text-glow 1.5s ease-in-out infinite alternate;
     padding: 0 20px;
     font-weight: 800;
@@ -298,10 +298,10 @@ h1, h2 {
 
 @keyframes text-glow {
     0% {
-        text-shadow: 0 0 3px rgba(80, 0, 10, 0.6), 0 0 6px rgba(80, 0, 10, 0.4);
+        text-shadow: wheat;
     }
     100% {
-        text-shadow: 0 0 6px rgba(80, 0, 10, 0.8), 0 0 10px rgba(80, 0, 10, 0.6);
+        text-shadow: wheat;
     }
 }
 
@@ -322,14 +322,14 @@ p {
     max-width: 300px;
     padding: 15px 30px;
     font-size: 1.2rem;
-    color: red;
+    color: whitesmoke;
     background: none;
-    border: 2px solid red;
+    border: 2px solid whitesmoke;
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 800;
-    text-shadow: 0 0 3px rgba(80, 0, 10, 0.6), 0 0 6px rgba(80, 0, 10, 0.4);
+    text-shadow: wheat;
     animation: button-float 1.5s ease-in-out infinite;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -345,7 +345,7 @@ p {
 
 .download-button:hover {
     transform: scale(1.1);
-    background: #4B0012;
+    background: black;
 }
 
 /* Секция загрузки */
@@ -396,7 +396,7 @@ p {
 .social-media-button {
     margin-left: 30px;
     font-size: 1rem;
-    color: #A70023;
+    color: whitesmoke;
     background: none;
     border: none;
     padding: 0;
@@ -420,11 +420,11 @@ p {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;
-    background: #2B000C;
+    background: black;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(80, 0, 10, 0.6);
+    box-shadow: whitesmoke;
 }
 
 .modal-content ul {
@@ -438,7 +438,7 @@ p {
 
 /* Социальные сети */
 .modal-content a {
-    color: red;
+    color: whitesmoke;
     text-decoration: none;
     font-weight: 800;
 }
@@ -462,11 +462,11 @@ p {
 }
 
 .why-us-point {
-    background-color: #1A0008;
-    border: 2px solid red;
+    background-color: black;
+    border: 2px solid black;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(167, 0, 35, 0.4);
+    box-shadow: white;
     color: #c0c0c0;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -476,15 +476,15 @@ p {
 
 .why-us-point:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(167, 0, 35, 0.8);
+    box-shadow: white;
 }
 
 /* Плашки "Почему мы?" */
 .why-us-point h3 {
-    color: red;
+    color: whitesmoke;
     margin-bottom: 10px;
     font-size: 1.2rem;
-    text-shadow: 0 0 5px rgba(167, 0, 35, 0.6);
+    text-shadow: white;
     font-weight: 800;
 }
 
@@ -494,3 +494,38 @@ p {
     margin: 0;
     font-weight: 700;
 }
+
+.wait-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #timer {
+    font-size: 2rem;
+    font-weight: 800;
+    color: whitesmoke;
+    margin: 20px 0;
+  }
+  
+  .download-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    background: none;
+    border: 2px solid whitesmoke;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: wheat;
+    animation: button-float 1.5s ease-in-out infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin: 10px;
+  }
+  
+  .download-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
