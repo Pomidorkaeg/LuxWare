@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuxWar</title>
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://apis.google.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data: https://*.githubusercontent.com;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self';
+    frame-ancestors 'none';
+    form-action 'self';
+    base-uri 'self';
+    object-src 'none';
+  ">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <title>LuxVar</title>
   <link rel="icon" type="image/png" sizes="32x32" href="iconn.png">
   <link rel="icon" type="image/png" sizes="16x16" href="iconn.png">
   <link rel="apple-touch-icon" sizes="180x180" href="iconn.png">
@@ -14,17 +29,16 @@
 </head>
 <body>
 
-  
-
   <div class="header">
     <div class="logo">
-      <img src="iconn.png" alt="Логотип LuxWar" class="logo-img">
-      LuxWar
+      <img src="iconn.png" alt="Логотип LuxWar" class="logo-img" loading="lazy">
+      LuxVar
     </div>
   
     <button class="why-us-button">Почему мы?</button>
     <button class="instruction-button">Инструкция</button>
     <button class="social-media-button">Социальные сети</button>
+    <button class="video-instruction-button" id="videoInstructionButton">Видео инструкция</button>
   </div>
 
   <section class="section download-section">
@@ -33,22 +47,21 @@
       <button class="download-button" id="openSiteButton">Скачать настройки</button>
     </div>
     <div class="image-content">
-      <img src="te.png" alt="Продукт" />
+      <img src="te.png" alt="Продукт" loading="lazy" />
     </div>
   </section>
 
-  <!-- Скрытая секция "Почему мы?" -->
   <section class="section why-us-section" id="why-us-section">
     <div class="text-content">
       <h2>Почему именно мы?</h2>
       <div class="image-gallery">
-        <img src="lux.png" alt="Фото 1">
-        <img src="war.png" alt="Фото 2">
+        <img src="cheat.jpg" alt="Фото 1" loading="lazy">
+        <img src="cheatss.jpg" alt="Фото 2" loading="lazy">
       </div>
       <div class="why-us-points">
         <div class="why-us-point">
           <h3>Бесплатный доступ</h3>
-          <p>Мы предлагаем второй бесплатный чит на рынке, который доступен каждому.</p>
+          <p>Мы предлагаем бесплатный чит, который доступен каждому.</p>
         </div>
         <div class="why-us-point">
           <h3>Надежность</h3>
@@ -66,38 +79,35 @@
     </div>
   </section>
 
-  <!-- Затемнение фона -->
   <div class="modal-overlay"></div>
 
-  <!-- Модальное окно с инструкцией -->
   <div id="instructionModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Инструкция по запуску чит-программы LuxWar</h2>
+      <h2>Инструкция по запуску чит-программы LuxVar</h2>
       <ol>
-        <li>Отключите антивирус, чтобы избежать блокировки.</li>
-        <li>Скачайте и разархивируйте Лоадер.</li>
-        <li>Запустите Steam от имени администратора.</li>
-        <li>Запустите Лоадер от имени администратора, но не нажимайте на кнопку активации чита.</li>
-        <li>Запустите CS2 и только после этого инджектите чит.</li>
+        <li>Отключаем антивирус.</li>
+        <li>Скачиваем архив, разархивируем и переносим все в одну папку на рабочий стол.</li>
+        <li>Запускаем Steam НЕ от имени администратора.</li>
+        <li>Запускаем cs2.</li>
+        <li>Запускаем инжектор</li>
+        <li>В открывшейся консоли нажимаем цифру 1 для инджекта, для выбора cs2 также нажимаем 1, после этих дествий вводим luxvar.dll и нажимаем Enter</li>
+        <li>В cs2 нажимаем на клавиатуре Ins</li>
       </ol>
     </div>
   </div>
 
-  <!-- Модальное окно для социальных сетей -->
   <div id="socialMediaModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Социальные сети</h2>
       <ul>
-        <li><a href="https://t.me/luxvarhacc" target="_blank">TG</a></li>
-        <li><a href="https://t.me/luxvarhacc" target="_blank">VK</a></li>
-        <li><a href="https://t.me/luxvarhacc" target="_blank">YouTube</a></li>
+        <li><a href="https://t.me/luxvarhacc" target="_blank" rel="noopener noreferrer">TG</a></li>
+        <li><a href="https://t.me/luxvarhacc" target="_blank" rel="noopener noreferrer">VK</a></li>
+        <li><a href="https://www.youtube.com/@LuxVarHac" target="_blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
     </div>
   </div>
-
-  
 
   <script src="script.js"></script>
 </body>
